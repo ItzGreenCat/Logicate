@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "logicate",
+  "version": "1.0-SNAPSHOT",
+  "name": "Logicate",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/logicate/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.onyxcat.logicate.client.LogicateDataGenerator"
+    ],
+    "client": [
+      "dev.onyxcat.logicate.client.LogicateClient"
+    ],
+    "main": [
+      "dev.onyxcat.logicate.Logicate"
+    ]
+  },
+  "mixins": [
+    "logicate.mixins.json",
+    {
+      "config": "logicate.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric-api": "*",
+    "minecraft": "26.3"
+  }
+}
